@@ -39,8 +39,14 @@
     .subtext a {
       color: white;
       font-weight: bold;
-      text-decoration: underline;
       font-size: 1.3rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .subtext a:hover {
+      color: #f5e663;
     }
 
     .grid {
@@ -69,6 +75,7 @@
       transform: scale(1.05);
     }
 
+    /* TITRE : fond semi-transparent + masquage au hover */
     .card-title {
       position: absolute;
       bottom: 15px;
@@ -78,6 +85,13 @@
       font-weight: bold;
       z-index: 1;
       text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 4px 10px;
+      border-radius: 8px;
+      transition: opacity 0.3s ease;
+    }
+    .card:hover .card-title {
+      opacity: 0;
     }
 
     .card-overlay {
@@ -93,6 +107,7 @@
       transition: opacity 0.4s ease;
       padding: 1rem;
       text-align: center;
+      z-index: 2;
     }
 
     .card:hover .card-overlay {
@@ -136,9 +151,11 @@
       color: #666;
     }
 
+    /* Ajustement mobile */
     @media screen and (max-width: 600px) {
       .card {
         width: 90%;
+        height: 180px;
       }
     }
   </style>
@@ -150,9 +167,8 @@
       Équipe B2MS CleanTech
     </h1>
     <p>Innovation durable & interdisciplinaire</p>
-
     <div class="subtext">
-      <a href="https://trc.tekbot.io/" target="_blank">
+      <a href="https://trc.tekbot.io/" target="_blank" rel="noopener noreferrer">
         Tekbot Robotics Challenge
       </a>
     </div>
@@ -179,7 +195,7 @@
         <h3>Conception de circuit et système électronique embarqué</h3>
         <ul>
           <li>Hiba EL GOUMRI</li>
-          <li>Hiba BENZAGHAR </li>
+          <li>Hiba BENZAGHAR</li>
           <li>Maryam EL HATIMY</li>
         </ul>
       </div>
