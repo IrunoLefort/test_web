@@ -36,17 +36,25 @@
       font-size: 1rem;
     }
 
+    /* Bouton du lien */
     .subtext a {
-      color: white;
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: rgba(255, 255, 255, 0.85);
+      color: #007b5f;
       font-weight: bold;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
+      border-radius: 24px;
       text-decoration: none;
-      cursor: pointer;
-      transition: color 0.3s ease;
+      border: 2px solid transparent;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     }
 
     .subtext a:hover {
-      color: #f5e663;
+      background-color: white;
+      color: #005844;
+      border-color: #005844;
     }
 
     .grid {
@@ -75,7 +83,6 @@
       transform: scale(1.05);
     }
 
-    /* TITRE : fond semi-transparent + masquage au hover */
     .card-title {
       position: absolute;
       bottom: 15px;
@@ -151,7 +158,6 @@
       color: #666;
     }
 
-    /* Ajustement mobile */
     @media screen and (max-width: 600px) {
       .card {
         width: 90%;
